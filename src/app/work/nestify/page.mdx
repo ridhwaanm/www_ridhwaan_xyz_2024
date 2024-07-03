@@ -1,0 +1,61 @@
+import logo from '@/images/clients/nestify/logomark-dark.svg'
+import imageHero from './hero.jpg'
+
+export const caseStudy = {
+  client: 'Nestify',
+  title: 'Nestify\'s Data Nest: Hatching Revenue Growth',
+  description:
+    'Nestify revolutionized its short-term rental optimization using data science, geographical coordinates, and clustering techniques to maximize revenue and competitiveness.',
+  summary: [
+    'Nestify optimized its short-term rental listings using data science. By creating a data pipeline, utilizing coordinates, and applying clustering, I developed a predictive model for pricing optimization.',
+    'The solution increased host revenue and platform competitiveness, establishing Nestify as an industry leader.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2024-02',
+  service: 'Data Modelling, Clustering, Predictive Analytics, Pricing Optimization, Revenue Optimization',
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+<TagList>
+  <TagListItem>MySQL</TagListItem>
+  <TagListItem>Julia</TagListItem>
+  <TagListItem>JavaScript</TagListItem>
+  <TagListItem>AWS</TagListItem>
+</TagList>
+
+## Impact
+
+A transformative project that laid the foundation to revolutionise the company's approach to short-term rental listing optimisation. By leveraging data science techniques, I provided a solution that significantly improved Nestify's competitiveness in the market.
+
+The project's impact was multifaceted. Firstly, I created a robust data pipeline that integrated siloed transactional data from Nestify's bespoke booking platform. This pipeline enabled the creation of a comprehensive data model, which serves as the foundation for in-depth analysis and uncovering valuable insights. The pipeline remains a foundational asset for all future data solutions.
+
+To address the challenge of varying city or town boundary sizes, I implemented a novel approach using latitude and longitude coordinates for each property. By leveraging these precise geographical coordinates, I applied clustering techniques to group properties based on their proximity and location characteristics. This scientific approach ensured accurate clustering of properties, regardless of inconsistencies in city or town boundaries.
+Building upon the data model and geographical clustering, I developed a time-based predictive model for pricing optimization. This model considered various factors, including historical booking data, seasonality, and location-specific trends. By implementing a hierarchical modeling approach with country and cluster-specific models.
+
+The optimised pricing strategy will result in a significant increase in revenue for Nestify's hosts and improved the overall competitiveness of the agency.
+
+Throughout the project, I utilized cutting-edge technologies such as Julia (primary language), JavaScript, various Julia packages (DataFrames.jl, MySQL.jl, Clustering.jl, Flux.jl, Genie.jl), Next.js, Shadcn, AWS RDS, and Julia Module Architecture. These technologies ensured the robustness, efficiency, and maintainability of the implemented solutions.
+
+## Introduction to the Customer
+
+Nestify is a leading agency for the management of short-term rental property listings, connecting hosts with travelers worldwide. With a rapidly growing user base and an expanding portfolio of properties, Nestify recognized the need to optimize their listing prices to maximize revenue and improve occupancy. Nestify/'s footprint covers properties across multiple cities in UK, Frame, Spain, Ireland and the UAE.
+
+## Challenge
+
+Nestify faced several challenges in optimizing their short-term rental property listings:
+
+1. Transactional data from their bespoke booking platform was siloed and had not been analysed, hindering data-driven decision-making.
+2. Inconsistent city or town boundary sizes made it difficult to cluster properties geographically using a scientific approach.
+3. As a team without any data background they required a production-grade web UI solution within a tight timeline of 6 weeks.
+
+<StatList>
+  <StatListItem value="25%" label="Less traffic" />
+  <StatListItem value="10x" label="Page load times" />
+  <StatListItem value="15%" label="Higher infra costs" />
+  <StatListItem value="$1.2M" label="Legal fees" />
+</StatList>
