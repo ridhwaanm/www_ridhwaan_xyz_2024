@@ -23,31 +23,44 @@ import imageMichaelFoster from '@/images/team/michael-foster.jpg'
 import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
 import { loadArticles } from '@/lib/mdx'
 
-function Culture() {
+function EducationSection() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Education and Qualifications"
+        title="A Foundation of Continuous Learning"
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          My academic background and ongoing professional development form the
+          bedrock of my expertise in data science and analytics.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="University Education" invert>
+            Studied Econometrics, Economics and Actuarial Science at the{' '}
+            <strong className="font-semibold">
+              University of Witwatersrand
+            </strong>
+            , South Africa.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Professional Certifications" invert>
+            Professional Data Scientist certification from{' '}
+            <strong className="font-semibold">IBM</strong>, and Julia for
+            Scientific Programming from the{' '}
+            <strong className="font-semibold">University of Cape Town</strong>.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Specialized Training" invert>
+            Completed courses in Strategic Management and Innovation{' '}
+            <strong className="font-semibold">
+              Copenhagen Business School
+            </strong>
+            , Econometrics{' '}
+            <strong className="font-semibold">
+              Erasmus University Rotterdam
+            </strong>
+            , and AWS Cloud certification.
           </GridListItem>
         </GridList>
       </Container>
@@ -55,125 +68,144 @@ function Culture() {
   )
 }
 
-const team = [
-  {
-    title: 'Leadership',
-    people: [
-      {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
-      },
-      {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
-      },
-    ],
-  },
-  {
-    title: 'Team',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
-      },
-      {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
-      },
-    ],
-  },
-]
-
-function Team() {
+function SkillsExpertiseSection() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <div className="space-y-24">
-        {team.map((group) => (
-          <FadeInStagger key={group.title}>
-            <Border as={FadeIn} />
-            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
-              <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                  {group.title}
-                </h2>
-              </FadeIn>
-              <div className="lg:col-span-3">
-                <ul
-                  role="list"
-                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
-                >
-                  {group.people.map((person) => (
-                    <li key={person.name}>
-                      <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
-                            alt=""
-                            {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
-                              {person.name}
-                            </p>
-                            <p className="mt-2 text-sm text-white">
-                              {person.role}
-                            </p>
-                          </div>
-                        </div>
-                      </FadeIn>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </FadeInStagger>
-        ))}
-      </div>
-    </Container>
+    <div className="mt-24 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+      <SectionIntro
+        eyebrow="Skills and Expertise"
+        title="Mastering the Tools of Data Science"
+      >
+        <p>
+          My technical skills span a wide range of programming languages and
+          data science tools, enabling me to tackle complex analytical
+          challenges.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <GridList>
+          <GridListItem title="Programming Languages">
+            Proficient in Julia, Python, and JavaScript for versatile data
+            manipulation and analysis.
+          </GridListItem>
+          <GridListItem title="Predictive Analytics">
+            Expert in libraries such as FluxML, TensorFlow, PyTorch, Keras,
+            Scikit-learn, and MXNet.
+          </GridListItem>
+          <GridListItem title="Data Processing">
+            Skilled in using Pandas, NumPy, DataFrames.jl, DataFramesMeta.jl,
+            and CSV.jl for efficient data handling.
+          </GridListItem>
+          <GridListItem title="Web Development">
+            Experienced with React, Next.js, Node.js, and Tailwind CSS for
+            creating data-driven web applications.
+          </GridListItem>
+          <GridListItem title="Data Visualization">
+            Proficient in Plotly, Recharts, and D3.js for creating insightful
+            and interactive data visualizations.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  )
+}
+function MyApproachSection() {
+  return (
+    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+      <SectionIntro
+        eyebrow="My Approach"
+        title="Collaborative, Data-Driven Solutions"
+        invert
+      >
+        <p>
+          I believe in close collaboration with clients, focusing on clear
+          communication and measurable results. My process involves four key
+          stages, guided by core values.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <GridList>
+          <GridListItem title="Strategy" invert>
+            Work closely with clients to identify and prioritize challenges and
+            opportunities, combining their industry knowledge with my data
+            expertise.
+          </GridListItem>
+          <GridListItem title="Build" invert>
+            Employ rapid prototyping to develop minimum viable products (MVPs)
+            that address key business needs identified in the planning stage.
+          </GridListItem>
+          <GridListItem title="Scale" invert>
+            Create robust, enterprise-grade solutions that can handle growing
+            data volumes and integrate seamlessly with existing infrastructure.
+          </GridListItem>
+          <GridListItem title="Continuous Improvement" invert>
+            Regularly assess system performance against key business metrics and
+            user feedback, ensuring solutions evolve with changing needs.
+          </GridListItem>
+        </GridList>
+      </Container>
+      <Container className="mt-16">
+        <SectionIntro
+          eyebrow="Core Values"
+          title="Principles Guiding My Work"
+          invert
+        >
+          <p>
+            My approach is underpinned by six core values that drive me to
+            create impactful data science solutions.
+          </p>
+        </SectionIntro>
+        <GridList>
+          <GridListItem title="Innovation" invert>
+            Exploring cutting-edge techniques to keep clients ahead in their
+            industries.
+          </GridListItem>
+          <GridListItem title="Integrity" invert>
+            Upholding the highest standards of honesty and ethical conduct.
+          </GridListItem>
+          <GridListItem title="Impact" invert>
+            Creating solutions that deliver measurable, meaningful results.
+          </GridListItem>
+          <GridListItem title="Collective Intelligence" invert>
+            Leveraging diverse perspectives for robust solutions.
+          </GridListItem>
+          <GridListItem title="Fairness" invert>
+            Treating all clients with respect and ensuring transparent
+            practices.
+          </GridListItem>
+          <GridListItem title="Purpose-led" invert>
+            Harnessing data science for positive societal impact.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  )
+}
+function PersonalSection() {
+  return (
+    <div className="mt-24 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+      <SectionIntro eyebrow="Personal Interests" title="Beyond the Data">
+        <p>
+          Outside of work, I&apos;m a family man with diverse interests that
+          complement my professional life.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <GridList>
+          <GridListItem title="Family">
+            Married with children, balancing professional pursuits with family
+            life.
+          </GridListItem>
+          <GridListItem title="Horse Riding">
+            Passionate about horse riding, finding balance and perspective
+            outside the world of data.
+          </GridListItem>
+          <GridListItem title="Culinary Adventures">
+            An enthusiast of spicy food, always ready to try new flavors and
+            cuisines.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
   )
 }
 
@@ -188,37 +220,23 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About me" title="Our strength is collaboration">
+      <PageIntro eyebrow="About me" title="Transforming Data into Value">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          I convert data into value. For 14 years, I&apos;ve looked at
+          consumers, businesses, and markets through a scientific lens. By
+          deconstructing patterns in data, I have unlocked new business
+          performance for clients across various industries.
         </p>
-        <div className="mt-10 max-w-2xl space-y-6 text-base">
-          <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
-          </p>
-          <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
-          </p>
-        </div>
+        <p className="mt-8">
+          My career has evolved from economic research to data science, always
+          focused on extracting value from complex information.
+        </p>
       </PageIntro>
-      <Container className="mt-16">
-        <StatList>
-          <StatListItem value="35" label="Clients" />
-          <StatListItem value="52" label="Projects" />
-          <StatListItem value="R25M" label="Revenue" />
-        </StatList>
-      </Container>
 
-      <Culture />
-
-      <Team />
+      <EducationSection />
+      <SkillsExpertiseSection />
+      <MyApproachSection />
+      <PersonalSection />
 
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
