@@ -1,60 +1,42 @@
-import { NextResponse } from 'next/server'
-
-const DOMAIN = 'https://www.ridhwaan.xyz'
-
-export default async function sitemap() {
-  const routes = ['', '/about', '/blog', '/contact', '/process', '/work']
-
-  const blogPosts = [
-    'four-key-features-for-successfully-deploying-vision-language-models-in-south-african-horticulture',
-    'revolutionizing-inventory-management',
-    'unleashing-the-power-of-predictive-analytics',
-  ]
-
-  const workProjects = ['hello', 'hollard', 'nestify']
-
-  const sitemapEntries = routes.map((route) => ({
-    url: `${DOMAIN}${route}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }))
-
-  blogPosts.forEach((post) => {
-    sitemapEntries.push({
-      url: `${DOMAIN}/blog/${post}`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    })
-  })
-
-  workProjects.forEach((project) => {
-    sitemapEntries.push({
-      url: `${DOMAIN}/work/${project}`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    })
-  })
-
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries
-  .map(
-    (entry) => `  <url>
-    <loc>${entry.url}</loc>
-    <lastmod>${entry.lastModified}</lastmod>
-    <changefreq>${entry.changeFrequency}</changefreq>
-    <priority>${entry.priority}</priority>
-  </url>`,
-  )
-  .join('\n')}
-</urlset>`
-
-  return new NextResponse(sitemapXml, {
-    headers: {
-      'Content-Type': 'application/xml',
+import { MetadataRoute } from 'next'
+ 
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: 'https://ridhwaan.xyz',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,
     },
-  })
+    {
+      url: 'https://ridhwaan.xyz/about',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://ridhwaan.xyz/work',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://ridhwaan.xyz/process',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://ridhwaan.xyz/contact',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://ridhwaan.xyz/blog',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.5,
+    },
+  ]
 }
