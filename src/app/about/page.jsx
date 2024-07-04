@@ -8,19 +8,6 @@ import { GridList, GridListItem } from '@/components/GridList'
 import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
-import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
 import { loadArticles } from '@/lib/mdx'
 
 function EducationSection() {
@@ -103,11 +90,17 @@ function SkillsExpertiseSection() {
             Proficient in Plotly, Recharts, and D3.js for creating insightful
             and interactive data visualizations.
           </GridListItem>
+          <GridListItem title="Databases">
+            Experienced in working with PostgreSQL, MongoDB, MariaDB, and MySQL.
+            Skilled in SQL queries, SQL-based ETL processes, and exploratory
+            data analysis (EDA) using SQL.
+          </GridListItem>
         </GridList>
       </Container>
     </div>
   )
 }
+
 function MyApproachSection() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
@@ -210,9 +203,9 @@ function PersonalSection() {
 }
 
 export const metadata = {
-  title: 'About Me',
+  title: 'About Ridhwaan',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'Learn about Ridhwaan Mayet, a data scientist with 14 years of experience transforming data into value for businesses across various industries.',
 }
 
 export default async function About() {
@@ -233,19 +226,37 @@ export default async function About() {
         </p>
       </PageIntro>
 
-      <EducationSection />
-      <SkillsExpertiseSection />
-      <MyApproachSection />
-      <PersonalSection />
+      <FadeInStagger>
+        <FadeIn>
+          <Border position="left">
+            <EducationSection />
+          </Border>
+        </FadeIn>
+        <FadeIn>
+          <SkillsExpertiseSection />
+        </FadeIn>
+        <FadeIn>
+          <Border>
+            <MyApproachSection />
+          </Border>
+        </FadeIn>
+        <FadeIn>
+          <PersonalSection />
+        </FadeIn>
+      </FadeInStagger>
 
-      <PageLinks
-        className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
-        pages={blogArticles}
-      />
+      <FadeIn>
+        <PageLinks
+          className="mt-24 sm:mt-32 lg:mt-40"
+          title="From the blog"
+          intro="Insights and thoughts on data, AI, analytics, and industry trends."
+          pages={blogArticles}
+        />
+      </FadeIn>
 
-      <ContactSection />
+      <FadeIn>
+        <ContactSection />
+      </FadeIn>
     </>
   )
 }
