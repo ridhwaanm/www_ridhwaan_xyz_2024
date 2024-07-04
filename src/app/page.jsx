@@ -64,14 +64,11 @@ function Clients() {
 function CaseStudies({ caseStudies }) {
   return (
     <>
-      <SectionIntro
-        title="Selected work"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
+      <SectionIntro title="Selected work" className="mt-24 sm:mt-32 lg:mt-40">
         <p>
-        Discover real-world examples of how my data science expertise has transformed 
-        businesses in the manufacturing and agriculture sectors, from building data 
-        assets to delivering actionable insights.
+          Discover real-world examples of how my data science expertise has
+          transformed businesses in the manufacturing and agriculture sectors,
+          from building data assets to delivering actionable insights.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -126,9 +123,10 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-        I help businesses make informed decisions by creating organised data assets, 
-        developing insightful dashboards, uncovering hidden patterns through deep analytics, 
-        and providing accurate predictions using machine learning.
+          I help businesses make informed decisions by creating organised data
+          assets, developing insightful dashboards, uncovering hidden patterns
+          through deep analytics, and providing accurate predictions using
+          machine learning.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -144,28 +142,39 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Data Asset Creation">
-            I lay the groundwork for your data-driven success with my comprehensive data asset creation service. 
-            Through expert data modelling, user-friendly forms, efficient data fetching, and robust engineering of relational data storage, 
-            I ensure that your data is organised, accessible, and ready to power your business decisions.
+              I lay the groundwork for your data-driven success with my
+              comprehensive data asset creation service. Through expert data
+              modelling, user-friendly forms, efficient data fetching, and
+              robust engineering of relational data storage, I ensure that your
+              data is organised, accessible, and ready to power your business
+              decisions.
             </ListItem>
             <ListItem title="Dashboard Development">
-            I transform scattered data sources into a unified, intuitive dashboard that empowers business managers 
-            to make informed decisions when opportunities or threats arise. 
-            My dashboard development service consolidates your data into a single, easy-to-understand frame, 
-            providing the clarity and insight you need to navigate complex business landscapes with confidence.
+              I transform scattered data sources into a unified, intuitive
+              dashboard that empowers business managers to make informed
+              decisions when opportunities or threats arise. My dashboard
+              development service consolidates your data into a single,
+              easy-to-understand frame, providing the clarity and insight you
+              need to navigate complex business landscapes with confidence.
             </ListItem>
             <ListItem title="Deep Analytics">
-            I help you dive beneath the surface of your data with my deep analytics service. 
-            By leveraging advanced statistical and mathematical methods, combined with my domain expertise, 
-            I uncover the hidden patterns and relationships that can be lost in the noise of simultaneous trends. 
-            My insights enable you to make data-driven decisions that reduce costs, increase revenue, and create a competitive edge.
+              I help you dive beneath the surface of your data with my deep
+              analytics service. By leveraging advanced statistical and
+              mathematical methods, combined with my domain expertise, I uncover
+              the hidden patterns and relationships that can be lost in the
+              noise of simultaneous trends. My insights enable you to make
+              data-driven decisions that reduce costs, increase revenue, and
+              create a competitive edge.
             </ListItem>
             <ListItem title="Predictive Modelling">
-            I enable you to unlock the predictive potential of your data streams with my cutting-edge predictive modelling service. 
-            By combining statistical methods with the learning and improvement capabilities of machine learning models, 
-            I develop highly accurate forecast models that leverage the vast computing power of the cloud. 
-            My models continuously learn from your data assets, enabling you to stay ahead of the curve and make proactive, 
-            data-driven decisions that drive your business forward.
+              I enable you to unlock the predictive potential of your data
+              streams with my cutting-edge predictive modelling service. By
+              combining statistical methods with the learning and improvement
+              capabilities of machine learning models, I develop highly accurate
+              forecast models that leverage the vast computing power of the
+              cloud. My models continuously learn from your data assets,
+              enabling you to stay ahead of the curve and make proactive,
+              data-driven decisions that drive your business forward.
             </ListItem>
           </List>
         </div>
@@ -176,7 +185,7 @@ function Services() {
 
 export const metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    '"Expert data science solutions for manufacturing and agriculture. From creating data assets to AI-driven insights, I empower businesses with actionable analytics for informed decision-making.',
 }
 
 export default async function Home() {
@@ -187,10 +196,10 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-          From Data Assets to AI Insights
+            From Data Assets to AI Insights
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-          Data-Driven Solutions for Manufacturing and Agriculture
+            Data-Driven Solutions for Manufacturing and Agriculture
           </p>
         </FadeIn>
       </Container>
@@ -203,11 +212,13 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Hello Paisa', logo: logoHelloPaisa }}
       >
-        Few people show such passion for understanding their client and their business—but Ridhwaan does. 
-        I had the pleasure of working closely with Ridhwaan for almost a year. 
-        Ridhwaan was hands-on as he managed the project and provided valuable analysis. 
-        I was particularly impressed by Ridhwaan&apos;s ability to unpack data into meaningful insights for the business. 
-        I look forward to working with Ridhwaan in the future. He provides true value to any client. - Ahmed Cassim, MD at Hello Group
+        Few people show such passion for understanding their client and their
+        business—but Ridhwaan does. I had the pleasure of working closely with
+        Ridhwaan for almost a year. Ridhwaan was hands-on as he managed the
+        project and provided valuable analysis. I was particularly impressed by
+        Ridhwaan&apos;s ability to unpack data into meaningful insights for the
+        business. I look forward to working with Ridhwaan in the future. He
+        provides true value to any client. - Ahmed Cassim, MD at Hello Group
       </Testimonial>
 
       <Services />

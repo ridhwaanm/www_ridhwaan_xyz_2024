@@ -13,7 +13,7 @@ import { loadArticles } from '@/lib/mdx'
 export const metadata = {
   title: 'Blog',
   description:
-    'Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.',
+    'Stay up-to-date with the latest AI and analytics industry news.',
 }
 
 export default async function Blog() {

@@ -132,9 +132,9 @@ function Clients() {
 }
 
 export const metadata = {
-  title: 'Our Work',
+  title: 'My Work',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'Explore data science case studies for manufacturing and agriculture. See how I have leveraged analytics and AI to optimize operations, boost efficiency, and drive growth for real-world clients.',
 }
 
 export default async function Work() {
