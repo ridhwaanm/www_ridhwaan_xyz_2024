@@ -1,0 +1,21 @@
+# Build settings
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Sitemap plugin configuration
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = ".next"
+  prettyURLs = true
+  trailingSlash = true
+  changeFreq = "daily"
+  priority = 0.5
+
+# Header configuration for sitemap.xml
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
