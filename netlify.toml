@@ -2,6 +2,7 @@
   command = "npm run build"
   publish = ".next"
 
+# Default sitemap configuration
 [[plugins]]
 package = "@netlify/plugin-sitemap"
 
@@ -11,25 +12,26 @@ package = "@netlify/plugin-sitemap"
   trailingSlash = true
   changeFreq = "monthly"
   priority = 0.5
+  exclude = ["/blog/*"]
 
-  # Custom change frequencies
-  [[plugins.inputs.customChangeFreq]]
-    path = "/"
-    changeFreq = "monthly"
-  [[plugins.inputs.customChangeFreq]]
-    path = "/work"
-    changeFreq = "monthly"
-  [[plugins.inputs.customChangeFreq]]
-    path = "/process"
-    changeFreq = "monthly"
-  [[plugins.inputs.customChangeFreq]]
-    path = "/contact"
-    changeFreq = "monthly"
-  [[plugins.inputs.customChangeFreq]]
-    path = "/blog"
-    changeFreq = "weekly"
+# Sitemap configuration for /blog
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = ".next"
+  prettyURLs = true
+  trailingSlash = true
+  changeFreq = "weekly"
+  priority = 0.5
+  include = ["/blog", "/blog/*"]
 
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
     Content-Type = "application/xml"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
