@@ -34,6 +34,7 @@
     "unified-conditional": "0.0.2"
   },
   "devDependencies": {
+    "@netlify/plugin-sitemap": "^0.8.1",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
     "prettier": "^3.1.1",
