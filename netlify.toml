@@ -2,7 +2,7 @@
 command = "npm run build"
 publish = ".next"
 
-# Combined sitemap configuration
+# Sitemap configuration
 [[plugins]]
 package = "@netlify/plugin-sitemap"
 
@@ -10,22 +10,14 @@ package = "@netlify/plugin-sitemap"
 buildDir = ".next"
 prettyURLs = true
 trailingSlash = true
-
-# Default settings for most pages
 changeFreq = "monthly"
 priority = 0.5
 
-# Special configuration for blog pages
-[[plugins.inputs.sitemapPath]]
-path = "/blog"
-changeFreq = "weekly"
-priority = 0.5
+# Unfortunately, the plugin doesn't support path-specific configs
+# If you need different settings for blog pages, consider using exclude
+# and creating a separate sitemap for those specific pages
 
-[[plugins.inputs.sitemapPath]]
-path = "/blog/*"
-changeFreq = "weekly"
-priority = 0.5
-
+# Headers configuration for sitemap
 [[headers]]
 for = "/sitemap.xml"
 [headers.values]
